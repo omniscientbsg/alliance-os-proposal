@@ -1,0 +1,2230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alliance OS — Powered by Alliance OS | Sayaintel Proposal 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root {
+  --sand: #F5F0E8;
+  --sand-2: #EDE7D9;
+  --sand-3: #E2D9C8;
+  --cream: #FAF7F2;
+  --ink: #1C1A17;
+  --ink-2: #2E2B27;
+  --ink-3: #3D3A35;
+  --warm-gray: #8A8278;
+  --light-gray: #B8B2A8;
+  --border: rgba(28,26,23,0.1);
+  --border-mid: rgba(28,26,23,0.18);
+  --border-strong: rgba(28,26,23,0.28);
+  --rust: #C0432A;
+  --rust-light: #D4553C;
+  --rust-pale: #F5E8E5;
+  --forest: #2A5C3F;
+  --forest-light: #3A7A55;
+  --forest-pale: #E5EFE9;
+  --amber: #B8680A;
+  --amber-pale: #FDF0DC;
+  --slate: #3A4A5C;
+  --slate-pale: #E8EDF2;
+  --ff-display: 'Playfair Display', serif;
+  --ff-body: 'IBM Plex Sans', sans-serif;
+  --ff-mono: 'IBM Plex Mono', monospace;
+  --radius: 3px;
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--ff-body);
+  overflow-x: hidden;
+  line-height: 1.65;
+}
+
+::selection { background: var(--rust); color: white; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--sand-2); }
+::-webkit-scrollbar-thumb { background: var(--rust); }
+
+/* ────────────────────────────────────────
+   NAV
+──────────────────────────────────────── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 60px;
+  height: 64px;
+  background: rgba(250,247,242,0.94);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-brand { display: flex; align-items: center; gap: 12px; }
+.nav-logo-mark {
+  width: 32px; height: 32px;
+  background: var(--ink);
+  display: flex; align-items: center; justify-content: center;
+}
+.nav-logo-mark span {
+  font-family: var(--ff-display);
+  font-size: 14px; font-weight: 700;
+  color: white; letter-spacing: -0.5px;
+}
+.nav-name {
+  font-family: var(--ff-body); font-size: 0.82rem;
+  font-weight: 600; color: var(--ink); letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.nav-divider { width: 1px; height: 16px; background: var(--border-mid); }
+.nav-client {
+  font-family: var(--ff-mono); font-size: 0.7rem;
+  color: var(--warm-gray); letter-spacing: 0.04em;
+}
+.nav-links {
+  display: flex; gap: 0;
+}
+.nav-links a {
+  font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--warm-gray);
+  text-decoration: none; padding: 0 18px; height: 64px;
+  display: flex; align-items: center;
+  border-right: 1px solid var(--border);
+  transition: color 0.2s, background 0.2s;
+}
+.nav-links a:first-child { border-left: 1px solid var(--border); }
+.nav-links a:hover { color: var(--ink); background: var(--sand); }
+.nav-date {
+  font-family: var(--ff-mono); font-size: 0.68rem;
+  color: var(--light-gray);
+}
+
+/* ────────────────────────────────────────
+   HERO
+──────────────────────────────────────── */
+#hero {
+  min-height: 100vh;
+  padding: 140px 0 0;
+  display: flex; flex-direction: column;
+  position: relative; overflow: hidden;
+  background: var(--cream);
+}
+
+.hero-pattern {
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(28,26,23,0.06) 1px, transparent 0);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.hero-container {
+  display: grid; grid-template-columns: 1fr 400px;
+  gap: 0; flex: 1; max-width: 1400px; margin: 0 auto; width: 100%;
+  padding: 0 60px;
+  position: relative; z-index: 1;
+}
+
+.hero-left { padding: 60px 80px 60px 0; }
+
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--ff-mono); font-size: 0.68rem; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--rust);
+  border: 1px solid rgba(192,67,42,0.3);
+  padding: 6px 14px; margin-bottom: 48px;
+}
+.hero-tag::before {
+  content: '';
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--rust);
+  animation: blink 2s ease-in-out infinite;
+}
+@keyframes blink {
+  0%,100%{opacity:1} 50%{opacity:0.3}
+}
+
+.hero-title {
+  font-family: var(--ff-display);
+  font-size: clamp(3.4rem, 6vw, 6.5rem);
+  font-weight: 900; line-height: 0.94;
+  letter-spacing: -0.03em; color: var(--ink);
+  margin-bottom: 40px;
+}
+.hero-title em { font-style: italic; color: var(--rust); }
+.hero-title .sub-word {
+  font-weight: 400; color: var(--ink-3);
+}
+
+.hero-body {
+  font-size: 1.05rem; line-height: 1.8;
+  color: var(--ink-3); max-width: 560px;
+  margin-bottom: 56px;
+  border-left: 3px solid var(--rust);
+  padding-left: 24px;
+}
+
+.hero-stats {
+  display: flex; gap: 0;
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+.hero-stat {
+  padding: 24px 32px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.stat-num {
+  font-family: var(--ff-display);
+  font-size: 2.2rem; font-weight: 700;
+  color: var(--ink); line-height: 1;
+  margin-bottom: 4px;
+}
+.stat-label {
+  font-family: var(--ff-mono); font-size: 0.6rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--warm-gray);
+}
+
+.hero-right {
+  background: var(--ink);
+  padding: 56px 48px;
+  display: flex; flex-direction: column; gap: 32px;
+  position: relative;
+}
+.hero-right::before {
+  content: 'CONFIDENTIAL';
+  position: absolute; top: 20px; right: 20px;
+  font-family: var(--ff-mono); font-size: 0.55rem;
+  letter-spacing: 0.2em; color: rgba(255,255,255,0.15);
+}
+
+.brief-label {
+  font-family: var(--ff-mono); font-size: 0.62rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: rgba(255,255,255,0.3); margin-bottom: 4px;
+}
+.brief-val {
+  font-family: var(--ff-body); font-size: 0.9rem;
+  color: rgba(255,255,255,0.85); font-weight: 400;
+}
+.brief-val.large {
+  font-family: var(--ff-display); font-size: 1.5rem;
+  font-weight: 700; color: white;
+}
+.brief-divider { height: 1px; background: rgba(255,255,255,0.08); }
+
+.hero-portals-count {
+  font-family: var(--ff-display);
+  font-size: 4rem; font-weight: 900; line-height: 1;
+  color: white; margin-bottom: 6px;
+}
+.hero-portals-sub {
+  font-family: var(--ff-mono); font-size: 0.62rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+}
+
+.hero-portal-list {
+  display: flex; flex-direction: column; gap: 8px;
+  margin-top: 8px;
+}
+.hpl-item {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.8rem; color: rgba(255,255,255,0.55);
+}
+.hpl-dot {
+  width: 5px; height: 5px; flex-shrink: 0;
+  background: rgba(255,255,255,0.2);
+}
+
+.hero-band {
+  background: var(--rust);
+  padding: 20px 60px;
+  display: flex; gap: 80px; align-items: center;
+  flex-shrink: 0;
+}
+.band-item { display: flex; align-items: center; gap: 14px; }
+.band-num {
+  font-family: var(--ff-display); font-size: 2rem;
+  font-weight: 700; color: white;
+}
+.band-text {
+  font-size: 0.8rem; color: rgba(255,255,255,0.75);
+  line-height: 1.3; font-weight: 300;
+}
+.band-divider { width: 1px; height: 40px; background: rgba(255,255,255,0.2); }
+
+/* ────────────────────────────────────────
+   SHARED SECTION STYLES
+──────────────────────────────────────── */
+section { position: relative; }
+
+.section-inner {
+  max-width: 1300px; margin: 0 auto;
+  padding: 100px 60px;
+}
+
+.label-row {
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 12px;
+}
+.section-num {
+  font-family: var(--ff-mono); font-size: 0.62rem;
+  letter-spacing: 0.15em; color: var(--light-gray);
+}
+.section-tag {
+  font-family: var(--ff-mono); font-size: 0.62rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--rust); padding: 2px 10px;
+  border: 1px solid rgba(192,67,42,0.25);
+}
+.section-dash { flex: 1; height: 1px; background: var(--border); }
+
+.section-heading {
+  font-family: var(--ff-display);
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  font-weight: 900; line-height: 1.02;
+  letter-spacing: -0.025em; color: var(--ink);
+  margin-bottom: 16px;
+}
+.section-heading em { font-style: italic; color: var(--rust); }
+
+.section-sub {
+  font-size: 1rem; color: var(--warm-gray);
+  max-width: 600px; line-height: 1.8;
+}
+
+/* ────────────────────────────────────────
+   01 — WHAT WE'RE BUILDING
+──────────────────────────────────────── */
+#overview { background: var(--sand); }
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px; margin-top: 60px; align-items: start;
+}
+
+.overview-statement {
+  font-family: var(--ff-display);
+  font-size: 1.35rem; font-weight: 400; font-style: italic;
+  line-height: 1.65; color: var(--ink-2);
+  margin-bottom: 40px;
+}
+.overview-statement strong { font-weight: 700; font-style: normal; color: var(--ink); }
+
+.overview-features { display: flex; flex-direction: column; gap: 0; }
+.of-item {
+  display: flex; gap: 20px; align-items: flex-start;
+  padding: 22px 0; border-bottom: 1px solid var(--border);
+}
+.of-item:first-child { border-top: 1px solid var(--border); }
+.of-icon {
+  width: 36px; height: 36px; flex-shrink: 0;
+  background: var(--ink); display: flex;
+  align-items: center; justify-content: center;
+}
+.of-icon svg { width: 18px; height: 18px; }
+.of-name {
+  font-size: 0.9rem; font-weight: 600; color: var(--ink);
+  margin-bottom: 3px;
+}
+.of-desc { font-size: 0.82rem; color: var(--warm-gray); line-height: 1.6; }
+
+.overview-modules {
+  display: flex; flex-direction: column; gap: 2px;
+}
+.module-card {
+  background: white; padding: 22px 24px;
+  border: 1px solid var(--border);
+  border-left: 3px solid transparent;
+  transition: border-left-color 0.2s, box-shadow 0.2s;
+  cursor: default;
+}
+.module-card:hover { border-left-color: var(--rust); box-shadow: 4px 0 0 var(--rust); }
+.mc-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+.mc-name { font-size: 0.88rem; font-weight: 600; color: var(--ink); }
+.mc-badge {
+  font-family: var(--ff-mono); font-size: 0.58rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 2px 8px;
+}
+.mc-badge.core { background: var(--forest-pale); color: var(--forest); }
+.mc-badge.channel { background: var(--amber-pale); color: var(--amber); }
+.mc-badge.ops { background: var(--slate-pale); color: var(--slate); }
+.mc-badge.finance { background: var(--rust-pale); color: var(--rust); }
+.mc-desc { font-size: 0.78rem; color: var(--warm-gray); line-height: 1.5; }
+
+/* ────────────────────────────────────────
+   02 — PORTALS
+──────────────────────────────────────── */
+#portals { background: var(--cream); }
+
+.portals-intro {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+  margin-bottom: 60px; align-items: end;
+}
+.portals-count-display {
+  font-family: var(--ff-display); font-size: 8rem;
+  font-weight: 900; color: var(--ink); line-height: 1;
+  position: relative;
+}
+.portals-count-display::after {
+  content: 'PORTALS';
+  position: absolute; bottom: -20px; left: 2px;
+  font-family: var(--ff-mono); font-size: 0.62rem;
+  letter-spacing: 0.25em; color: var(--light-gray);
+}
+
+.portals-statement {
+  font-size: 1rem; color: var(--warm-gray); line-height: 1.8;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.portals-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+}
+
+.portal-card {
+  background: white; padding: 44px 40px;
+  border: 1px solid var(--border);
+  position: relative; overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.portal-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(28,26,23,0.1);
+  z-index: 1;
+}
+.portal-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+}
+.portal-card.rust::before { background: var(--rust); }
+.portal-card.forest::before { background: var(--forest); }
+.portal-card.amber::before { background: var(--amber); }
+.portal-card.slate::before { background: var(--slate); }
+.portal-card.ink::before { background: var(--ink); }
+.portal-card.warm::before { background: #8B6914; }
+
+.pc-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 28px; }
+.pc-num {
+  font-family: var(--ff-display); font-size: 4rem; font-weight: 900;
+  line-height: 1; color: var(--sand-2);
+  position: absolute; top: 32px; right: 32px;
+}
+.pc-icon-wrap {
+  width: 52px; height: 52px;
+  border: 1px solid var(--border-mid);
+  display: flex; align-items: center; justify-content: center;
+}
+.pc-icon-wrap svg { width: 24px; height: 24px; }
+
+.pc-title {
+  font-family: var(--ff-display); font-size: 1.5rem;
+  font-weight: 700; color: var(--ink);
+  margin-bottom: 6px; line-height: 1.2;
+}
+.pc-subtitle {
+  font-family: var(--ff-mono); font-size: 0.65rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--light-gray); margin-bottom: 20px;
+}
+.pc-desc {
+  font-size: 0.85rem; color: var(--warm-gray);
+  line-height: 1.7; margin-bottom: 24px;
+}
+
+.pc-features { display: flex; flex-direction: column; gap: 8px; margin-bottom: 28px; }
+.pcf-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 0.8rem; color: var(--ink-3); line-height: 1.5;
+}
+.pcf-item::before {
+  content: '';
+  width: 4px; height: 4px; border-radius: 50%;
+  background: var(--ink); flex-shrink: 0; margin-top: 7px;
+}
+
+.pc-footer {
+  display: flex; gap: 8px; flex-wrap: wrap;
+  padding-top: 20px; border-top: 1px solid var(--border);
+}
+.pc-tag {
+  font-family: var(--ff-mono); font-size: 0.58rem;
+  letter-spacing: 0.08em; padding: 3px 10px;
+  background: var(--sand); color: var(--warm-gray);
+  border: 1px solid var(--border);
+}
+
+/* ────────────────────────────────────────
+   03 — ARCHITECTURE
+──────────────────────────────────────── */
+#architecture { background: var(--ink); }
+#architecture .section-tag { color: #E8C97A; border-color: rgba(232,201,122,0.3); }
+#architecture .section-num { color: rgba(255,255,255,0.3); }
+#architecture .section-dash { background: rgba(255,255,255,0.08); }
+#architecture .section-heading { color: white; }
+#architecture .section-heading em { color: #E8C97A; }
+#architecture .section-sub { color: rgba(255,255,255,0.45); }
+
+.arch-diagram {
+  margin-top: 64px;
+  display: flex; flex-direction: column; gap: 3px;
+}
+
+.arch-layer {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 0; align-items: stretch;
+}
+
+.al-label {
+  display: flex; align-items: center; justify-content: flex-end;
+  padding: 0 20px 0 0;
+  font-family: var(--ff-mono); font-size: 0.58rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(255,255,255,0.25); text-align: right;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.al-nodes {
+  display: flex; gap: 3px; padding: 3px 0 3px 16px;
+  flex-wrap: wrap; align-items: center;
+}
+
+.al-node {
+  padding: 10px 18px;
+  font-family: var(--ff-mono); font-size: 0.7rem;
+  letter-spacing: 0.03em;
+  border: 1px solid; transition: all 0.2s; cursor: default;
+}
+.al-node.tier-user { border-color: rgba(255,255,255,0.12); color: rgba(255,255,255,0.45); background: rgba(255,255,255,0.04); }
+.al-node.tier-gateway { border-color: rgba(232,201,122,0.35); color: #E8C97A; background: rgba(232,201,122,0.07); }
+.al-node.tier-service { border-color: rgba(106,192,163,0.35); color: #6AC0A3; background: rgba(106,192,163,0.07); }
+.al-node.tier-data { border-color: rgba(150,180,220,0.35); color: #96B4DC; background: rgba(150,180,220,0.07); }
+.al-node.tier-devops { border-color: rgba(255,165,90,0.35); color: #FFA55A; background: rgba(255,165,90,0.07); }
+.al-node.tier-security { border-color: rgba(220,120,120,0.35); color: #DC7878; background: rgba(220,120,120,0.07); }
+.al-node.tier-ext { border-color: rgba(255,255,255,0.06); color: rgba(255,255,255,0.3); background: transparent; font-style: italic; }
+.al-node:hover { transform: translateY(-2px); filter: brightness(1.2); }
+
+.arch-arrow {
+  display: flex; align-items: center; gap: 12px;
+  padding: 6px 0 6px 116px;
+  font-family: var(--ff-mono); font-size: 0.6rem;
+  letter-spacing: 0.1em; color: rgba(255,255,255,0.2);
+}
+.arch-arrow::before { content: '↓↓'; letter-spacing: -4px; }
+
+.arch-specs {
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  gap: 2px; margin-top: 40px;
+}
+.arch-spec {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 24px 20px;
+  text-align: center;
+  transition: background 0.2s;
+}
+.arch-spec:hover { background: rgba(255,255,255,0.07); }
+.as-val {
+  font-family: var(--ff-display); font-size: 2rem;
+  font-weight: 700; color: #E8C97A; line-height: 1; margin-bottom: 6px;
+}
+.as-label {
+  font-family: var(--ff-mono); font-size: 0.58rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+}
+
+/* ────────────────────────────────────────
+   04 — DEPLOYMENT
+──────────────────────────────────────── */
+#deployment { background: var(--sand); }
+
+.deploy-intro-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; margin-top: 60px;
+}
+
+.deploy-text { }
+.deploy-body {
+  font-size: 1rem; color: var(--ink-3);
+  line-height: 1.8; margin-bottom: 32px;
+}
+
+.deploy-checklist { display: flex; flex-direction: column; gap: 12px; }
+.dc-item {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 16px 20px; background: white;
+  border: 1px solid var(--border); border-left: 3px solid transparent;
+  transition: border-left-color 0.2s;
+}
+.dc-item:hover { border-left-color: var(--forest); }
+.dc-check {
+  width: 20px; height: 20px; flex-shrink: 0;
+  background: var(--forest); display: flex;
+  align-items: center; justify-content: center;
+  color: white; font-size: 10px; margin-top: 1px;
+}
+.dc-text { font-size: 0.85rem; color: var(--ink-3); line-height: 1.5; }
+.dc-text strong { font-weight: 600; color: var(--ink); }
+
+.deploy-stack {
+  display: flex; flex-direction: column; gap: 2px;
+}
+.ds-category {
+  font-family: var(--ff-mono); font-size: 0.58rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--light-gray); padding: 12px 0 8px;
+  border-top: 1px solid var(--border);
+  margin-top: 8px;
+}
+.ds-category:first-child { margin-top: 0; border-top: none; }
+.ds-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.ds-tag {
+  font-family: var(--ff-mono); font-size: 0.72rem;
+  padding: 6px 14px; border: 1px solid var(--border);
+  color: var(--ink-3); background: white;
+  transition: all 0.2s;
+}
+.ds-tag:hover { background: var(--ink); color: white; border-color: var(--ink); }
+
+.deploy-sla-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 2px; margin-top: 56px;
+}
+.sla-card {
+  background: white; padding: 32px 28px;
+  border: 1px solid var(--border);
+  text-align: center;
+}
+.sla-top {
+  font-family: var(--ff-display); font-size: 2.6rem;
+  font-weight: 900; color: var(--ink); line-height: 1; margin-bottom: 6px;
+}
+.sla-unit {
+  font-family: var(--ff-mono); font-size: 0.62rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--light-gray); margin-bottom: 12px;
+}
+.sla-desc { font-size: 0.8rem; color: var(--warm-gray); line-height: 1.5; }
+
+/* ────────────────────────────────────────
+   05 — TIMELINE
+──────────────────────────────────────── */
+#timeline { background: var(--cream); }
+
+.timeline-track {
+    margin-top: 64px; position: relative;
+    padding-top: 40px;
+  }
+  .timeline-spine {
+    position: absolute; top: 10px; left: -8px; right: 0;
+    height: 3px; background: var(--rust); 
+  }
+  
+  /* Add the arrow to the right end of the spine */
+  .timeline-spine::after {
+    content: '';
+    position: absolute;
+    right: -2px; /* Slight overlap to merge perfectly */
+    top: 50%;
+    transform: translateY(-50%);
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 12px solid var(--rust);
+  }
+
+  .timeline-progress {
+    display: none; 
+  }
+  
+  .timeline-phases {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+  }
+  .tl-phase {
+    position: relative; 
+    padding-top: 30px;
+    cursor: default;
+  }
+  .tl-dot {
+    position: absolute; top: -38px; left: -8px; 
+    width: 20px; height: 20px; border-radius: 50%;
+    border: 4px solid var(--cream); 
+    background: var(--rust); 
+    transform: translateY(0);
+    transition: all 0.2s;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+  
+  .tl-phase .tl-dot,
+  .tl-phase.done .tl-dot,
+  .tl-phase.active .tl-dot { 
+    background: var(--rust); 
+    border: 4px solid var(--cream);
+    box-shadow: none; 
+  }
+  
+  .tl-phase:hover .tl-dot { transform: scale(1.15); }
+
+.tl-duration {
+  font-family: var(--ff-mono); font-size: 0.6rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--light-gray); margin-bottom: 8px;
+}
+.tl-name {
+  font-size: 0.95rem; font-weight: 700; color: var(--ink);
+  margin-bottom: 12px; line-height: 1.3;
+}
+.tl-items { display: flex; flex-direction: column; gap: 6px; }
+.tl-item {
+  font-size: 0.76rem; color: var(--warm-gray);
+  display: flex; align-items: flex-start; gap: 8px; line-height: 1.4;
+}
+.tl-item::before {
+  content: '→'; color: var(--light-gray); flex-shrink: 0;
+  font-family: var(--ff-mono);
+}
+
+/* ────────────────────────────────────────
+   06 — HOW WE MAINTAIN
+──────────────────────────────────────── */
+#maintain { background: var(--sand-2); }
+
+.maintain-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 2px; margin-top: 60px;
+}
+.maintain-card {
+  background: white; padding: 40px 36px;
+  border: 1px solid var(--border);
+  position: relative;
+}
+.maintain-card.full { grid-column: 1 / -1; }
+
+.mc2-num {
+  font-family: var(--ff-display); font-size: 5rem;
+  font-weight: 900; color: var(--sand-2); line-height: 1;
+  position: absolute; top: 24px; right: 24px;
+}
+
+.mc2-icon {
+  width: 44px; height: 44px; margin-bottom: 20px;
+  background: var(--sand-2); display: flex;
+  align-items: center; justify-content: center;
+}
+.mc2-icon svg { width: 22px; height: 22px; }
+
+.mc2-title {
+  font-family: var(--ff-body); font-size: 1.05rem;
+  font-weight: 700; color: var(--ink); margin-bottom: 10px;
+}
+.mc2-desc {
+  font-size: 0.82rem; color: var(--warm-gray);
+  line-height: 1.7; margin-bottom: 20px;
+}
+.mc2-specs { display: flex; flex-direction: column; gap: 8px; }
+.mc2-spec {
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 12px; align-items: center;
+  padding: 10px 14px; background: var(--cream);
+  border: 1px solid var(--border);
+}
+.mc2-spec-label { font-size: 0.78rem; color: var(--ink-3); }
+.mc2-spec-val {
+  font-family: var(--ff-mono); font-size: 0.72rem;
+  color: var(--rust); font-weight: 500;
+}
+
+/* ────────────────────────────────────────
+   07 — HOW WE HANDLE EVENTS
+──────────────────────────────────────── */
+#events { background: var(--cream); }
+
+.events-grid {
+  display: grid; grid-template-columns: 1fr 1.2fr;
+  gap: 80px; margin-top: 60px; align-items: start;
+}
+
+.severity-table {
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+.st-head {
+  display: grid; grid-template-columns: 80px 1fr 1fr 1fr;
+  background: var(--ink); padding: 12px 20px;
+  font-family: var(--ff-mono); font-size: 0.6rem;
+  letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.5);
+  gap: 12px;
+}
+.st-row {
+  display: grid; grid-template-columns: 80px 1fr 1fr 1fr;
+  padding: 14px 20px; gap: 12px;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+.st-row:last-child { border-bottom: none; }
+.st-row:hover { background: var(--sand); }
+.sev-badge {
+  font-family: var(--ff-mono); font-size: 0.65rem;
+  font-weight: 500; padding: 3px 8px; text-align: center;
+}
+.sev-badge.s1 { background: #FDECEA; color: #C0392B; }
+.sev-badge.s2 { background: #FDF3E6; color: #CA6F1E; }
+.sev-badge.s3 { background: #EBF5FB; color: #2471A3; }
+.sev-badge.s4 { background: #E9F7EF; color: #1D8348; }
+.st-cell { font-size: 0.78rem; color: var(--ink-3); }
+.st-cell.mono { font-family: var(--ff-mono); font-size: 0.72rem; color: var(--rust); }
+
+.incident-flow { display: flex; flex-direction: column; gap: 2px; }
+.if-step {
+  display: flex; gap: 20px; padding: 20px 24px;
+  background: white; border: 1px solid var(--border);
+  align-items: flex-start;
+  transition: border-left 0.2s;
+  border-left: 3px solid transparent;
+}
+.if-step:hover { border-left-color: var(--rust); }
+.if-num {
+  font-family: var(--ff-display); font-size: 1.8rem;
+  font-weight: 900; color: var(--sand-2); line-height: 1;
+  flex-shrink: 0; min-width: 40px;
+}
+.if-title { font-size: 0.88rem; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+.if-desc { font-size: 0.78rem; color: var(--warm-gray); line-height: 1.5; }
+
+/* ────────────────────────────────────────
+   08 — WHAT MAKES US DIFFERENT
+──────────────────────────────────────── */
+#traits { background: var(--sand); }
+
+.traits-intro {
+  max-width: 680px; margin-bottom: 60px;
+  font-size: 1.05rem; color: var(--ink-3); line-height: 1.8;
+}
+
+.traits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.trait-card {
+  background: white; padding: 40px;
+  border: 1px solid var(--border);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex; flex-direction: column;
+}
+.trait-card.featured {
+  background: var(--ink);
+  grid-column: 1 / -1;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+  border-color: var(--ink);
+  align-items: center;
+}
+
+  .trait-card.featured .tc-title { color: white; }
+  .trait-card.featured .tc-desc { color: rgba(255,255,255,0.55); }
+  .trait-card.featured .tc-icon-wrap { background: rgba(255,255,255,0.08); }
+  .trait-card.featured .tc-icon-wrap svg { stroke: rgba(255,255,255,0.6); }
+  
+  .tc-icon-wrap {
+    width: 48px; height: 48px; background: var(--sand-2);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 20px;
+  }
+  .tc-icon-wrap svg { width: 22px; height: 22px; stroke: var(--ink); fill: none; stroke-width: 1.5; }
+  
+  .tc-title {
+    font-size: 1.1rem; font-weight: 700; color: var(--ink);
+    margin-bottom: 10px; line-height: 1.3;
+  }
+  .tc-desc {
+    font-size: 0.9rem; color: var(--warm-gray); line-height: 1.6;
+  }
+
+
+  /* -----------------------------------------
+     09 - EXPERIENCE
+  ------------------------------------------ */
+  #experience { background: var(--sand); }
+  
+  .exp-grid {
+    display: grid; grid-template-columns: 1fr 400px;
+    gap: 80px; margin-top: 60px; align-items: start;
+  }
+  .exp-left { display: flex; flex-direction: column; }
+  .exp-feature {
+    display: flex; gap: 20px; padding: 28px 0;
+    border-bottom: 1px solid var(--border); align-items: flex-start;
+  }
+  .exp-feature:first-child { border-top: 1px solid var(--border); }
+  .ef-icon {
+    width: 38px; height: 38px; flex-shrink: 0;
+    border: 1px solid var(--border-mid);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .ef-icon svg { width: 18px; height: 18px; stroke: var(--ink); fill: none; stroke-width: 1.5; }
+  .ef-title { font-size: 0.9rem; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+  .ef-desc { font-size: 0.8rem; color: var(--warm-gray); line-height: 1.6; }
+  
+  .exp-widget {
+    background: white; border: 1px solid var(--border);
+    padding: 32px;
+  }
+  .ew-title {
+    font-family: var(--ff-mono); font-size: 0.65rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--light-gray); margin-bottom: 24px;
+    border-bottom: 1px solid var(--border); padding-bottom: 12px;
+  }
+  .ew-row { margin-bottom: 20px; }
+  .ew-row:last-child { margin-bottom: 0; }
+  .ew-label { font-size: 0.72rem; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+  .ew-val { font-family: var(--ff-display); font-size: 1.8rem; font-weight: 700; color: var(--rust); line-height: 1; margin-bottom: 4px; }
+  .ew-sub { font-size: 0.75rem; color: var(--warm-gray); line-height: 1.4; }
+
+  /* -----------------------------------------
+     10 - CLOSING
+  ------------------------------------------ */
+  #closing {
+    background: var(--ink); color: white;
+    padding: 60px 0 100px; position: relative; overflow: hidden;
+  }
+  .closing-pattern {
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.08) 1px, transparent 0);
+    background-size: 32px 32px;
+    pointer-events: none;
+  }
+  #closing .section-inner { position: relative; z-index: 1; }
+  #closing .section-tag { color: #E8C97A; border-color: rgba(232,201,122,0.3); }
+  #closing .section-num { color: rgba(255,255,255,0.2); }
+  #closing .section-dash { background: rgba(255,255,255,0.08); }
+  #closing .section-heading { color: white; }
+  #closing .section-heading em { color: #E8C97A; font-style: italic; }
+  
+  .closing-grid {
+    display: grid; grid-template-columns: 1.2fr 1fr;
+    gap: 80px; margin-top: 60px;
+  }
+  .closing-statement {
+    font-family: var(--ff-display); font-size: 1.6rem;
+    font-style: italic; color: white; line-height: 1.5;
+    margin-bottom: 48px;
+  }
+  .cta-block { display: flex; flex-direction: column; gap: 12px; }
+  .cta-primary, .cta-secondary {
+    display: inline-flex; align-items: center; justify-content: space-between;
+    padding: 20px 28px; text-decoration: none;
+    font-size: 0.9rem; font-weight: 600; letter-spacing: 0.04em;
+    transition: transform 0.2s, background 0.2s;
+  }
+  .cta-primary { background: white; color: var(--ink); }
+  .cta-primary:hover { background: var(--sand-3); transform: translateX(4px); }
+  .cta-secondary { border: 1px solid rgba(255,255,255,0.2); color: white; }
+  .cta-secondary:hover { background: rgba(255,255,255,0.05); transform: translateX(4px); }
+  
+  .closing-details {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 40px; display: flex; flex-direction: column; gap: 24px;
+  }
+  .cd-item { display: flex; flex-direction: column; gap: 6px; }
+  .cd-label {
+    font-family: var(--ff-mono); font-size: 0.6rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+  .cd-val { font-size: 0.9rem; color: white; font-weight: 500; }
+  
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .overview-grid, .portals-intro, .deploy-intro-grid,
+    .events-grid, .exp-grid, .closing-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+
+</style>
+</head>
+<body>
+
+<style>
+  #mobile-blocker {
+    display: none;
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--ink); color: white;
+    z-index: 9999;
+    align-items: center; justify-content: center;
+    text-align: center; padding: 40px;
+    font-family: var(--ff-body);
+  }
+  #mobile-blocker h1 {
+    font-family: var(--ff-display); font-size: 2rem; margin-bottom: 20px;
+  }
+  #mobile-blocker p {
+    color: var(--warm-gray); font-size: 1rem; line-height: 1.6;
+  }
+  @media (max-width: 1024px) {
+    .traits-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 900px) {
+    body { overflow: hidden; }
+    #mobile-blocker { display: flex; flex-direction: column; }
+    #main-content { display: none; }
+  }
+</style>
+<div id="mobile-blocker">
+  <h1>Alliance OS Proposal</h1>
+  <p>This is an enterprise architectural proposal.<br>Kindly open this on a desktop browser for the optimal experience.</p>
+</div>
+<div id="main-content">
+
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-logo-mark"><span>S</span></div>
+    <span class="nav-name">Sayaintel</span>
+    <div class="nav-divider"></div>
+    <span class="nav-client">For: Alliance Insurance</span>
+  </div>
+  <div class="nav-links">
+    <a href="#overview">Solution</a>
+    <a href="#portals">Portals</a>
+    <a href="#architecture">Architecture</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#traits">Differentiators</a>
+    <a href="#closing">Discuss</a>
+  </div>
+  <div class="nav-date">May 2026</div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-container">
+    <div class="hero-left">
+      <div class="hero-tag">Software Proposal — Alliance Insurance</div>
+      <h1 class="hero-title">
+        Your insurance<br>
+        OS, <em>completely</em><br>
+        <span class="sub-word">reimagined.</span>
+      </h1>
+      <p class="hero-body">
+        Alliance OS by Sayaintel is not a policy system upgrade. It is the insurance operating layer your business will run on — every portal, every transaction, every workflow, every employee, every channel partner, every customer — from a single, unified, low-code-configurable platform.
+      </p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="stat-num">15m &rarr; 90s</div>
+          <div class="stat-label">Workflow Reduction</div>
+        </div>
+        <div class="hero-stat">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Portals Delivered</div>
+        </div>
+        <div class="hero-stat">
+          <div class="stat-num">99%</div>
+          <div class="stat-label">APIs ≤ 3s</div>
+        </div>
+        <div class="hero-stat">
+          <div class="stat-num">≤6h</div>
+          <div class="stat-label">Disaster Recovery</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div>
+        <div class="brief-label">Prepared For</div>
+        <div class="brief-val large">Alliance Insurance</div>
+      </div>
+      <div class="brief-divider"></div>
+      <div>
+        <div class="brief-label">Delivered By</div>
+        <div class="brief-val">Sayaintel Corporation</div>
+        <div class="brief-val" style="color:rgba(255,255,255,0.4);font-size:0.8rem;margin-top:2px;">Alliance OS Platform © 2025</div>
+      </div>
+      <div class="brief-divider"></div>
+      <div>
+        <div class="hero-portals-count">6</div>
+        <div class="hero-portals-sub">Portals included in scope</div>
+        <div class="hero-portal-list">
+          <div class="hpl-item"><div class="hpl-dot"></div>Staff Workbench (Back Office)</div>
+          <div class="hpl-item"><div class="hpl-dot"></div>Direct Customer Portal</div>
+          <div class="hpl-item"><div class="hpl-dot"></div>Intermediaries & Broker Portal</div>
+          <div class="hpl-item"><div class="hpl-dot"></div>Affinity Partner Minisite</div>
+          <div class="hpl-item"><div class="hpl-dot"></div>Aggregator Minisite</div>
+          <div class="hpl-item"><div class="hpl-dot"></div>Mobile App (iOS & Android)</div>
+        </div>
+      </div>
+      <div class="brief-divider"></div>
+      <div>
+        <div class="brief-label">Platform</div>
+        <div class="brief-val">Alliance OS — Next-Gen Core</div>
+      </div>
+      <div>
+        <div class="brief-label">Proposed Go-Live</div>
+        <div class="brief-val">Phase 1 — Q4 2026</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-band">
+    <div class="band-item">
+      <div class="band-num">≤10m</div>
+      <div class="band-text">Scheduled deployment<br>downtime</div>
+    </div>
+    <div class="band-divider"></div>
+    <div class="band-item">
+      <div class="band-num">≤15m</div>
+      <div class="band-text">Recovery Point<br>Objective (RPO)</div>
+    </div>
+    <div class="band-divider"></div>
+    <div class="band-item">
+      <div class="band-num">80%</div>
+      <div class="band-text">APIs respond<br>within 1 second</div>
+    </div>
+    <div class="band-divider"></div>
+    <div class="band-item">
+      <div class="band-num">3-Tier</div>
+      <div class="band-text">Platform, Tenant<br>& Product isolation</div>
+    </div>
+    <div class="band-divider"></div>
+    <div class="band-item">
+      <div class="band-num">AES-256</div>
+      <div class="band-text">All PII & sensitive<br>data encrypted</div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 — OVERVIEW -->
+<section id="overview">
+  <div class="section-inner">
+    <div class="label-row reveal">
+      <span class="section-num">01</span>
+      <span class="section-tag">What We're Building</span>
+      <div class="section-dash"></div>
+    </div>
+    <h2 class="section-heading reveal">A complete insurance<br>operating system.<br><em>Not a software tool.</em></h2>
+    <div class="overview-grid">
+      <div>
+        <p class="overview-statement reveal">
+          Alliance OS is a <strong>AI-native, event-driven bespoke infrastructure</strong> serving insurers across Asia with policy volumes in the tens of millions. Alliance will receive a fully configured instance — not a fresh codebase — with 
+        </p>
+        <div class="overview-features reveal">
+          <div class="of-item">
+            <div class="of-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <div>
+              <div class="of-name">Command-Driven Operations (Omnibar)</div>
+              <div class="of-desc">One platform, data/logic isolation per tenant, unlimited products. Life, GI, Health, Micro-products all under one roof — each independently configurable.</div>
+            </div>
+          </div>
+          <div class="of-item">
+            <div class="of-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <div>
+              <div class="of-name">Object-Centric Canvas Workspaces</div>
+              <div class="of-desc">Build and modify insurance products, underwriting rules, pricing formulas, workflows, and UI layouts — all from a visual interface. No code deployments needed for business changes.</div>
+            </div>
+          </div>
+          <div class="of-item">
+            <div class="of-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <div>
+              <div class="of-name">Exception-Based Processing (AI Maker)</div>
+              <div class="of-desc">The AI is the Maker. The Human is the Exception Handler. AI ingests PDFs, extracts 40+ fields, and cross-references policies. Humans simply review highlighted fields and click Approve.</div>
+            </div>
+          </div>
+          <div class="of-item">
+            <div class="of-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <div class="of-name">Modern Event-Driven Architecture</div>
+              <div class="of-desc">AES-256 PII encryption, SSO/SAML/OAuth2/JWT auth, WAF, rate limiting, circuit breakers, audit logging, and role-based data isolation — fully out of box.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="overview-modules reveal">
+        <div class="module-card">
+          <div class="mc-head">
+            <div class="mc-name">Policy Administration</div>
+            <span class="mc-badge core">Core</span>
+          </div>
+          <div class="mc-desc">Full lifecycle — quotation, proposal, issuance, endorsement, renewal, cancellation. Configurable per product with on-screen rules, rate tables, and coverage structures.</div>
+        </div>
+        <div class="module-card">
+          <div class="mc-head">
+            <div class="mc-name">Claims Management</div>
+            <span class="mc-badge core">Core</span>
+          </div>
+          <div class="mc-desc">Claim registration, reserve management, settlement workflows, authority levels, recovery tracking, and legal management — all configurable without code.</div>
+        </div>
+        <div class="module-card">
+          <div class="mc-head">
+            <div class="mc-name">Reinsurance</div>
+            <span class="mc-badge core">Core</span>
+          </div>
+          <div class="mc-desc">Treaty and facultative configuration — quota share, XOL, surplus. Outward and inward treaty definitions, risk accumulation limits, RI cession automation.</div>
+        </div>
+        <div class="module-card">
+          <div class="mc-head">
+            <div class="mc-name">Finance & Billing</div>
+            <span class="mc-badge finance">Finance</span>
+          </div>
+          <div class="mc-desc">Premium billing, collections, GL integration, bank reconciliation, commission settlements, refunds, offsets, and accounting rule engine — all configurable.</div>
+        </div>
+        <div class="module-card">
+          <div class="mc-head">
+            <div class="mc-name">Sales Channels & Commission</div>
+            <span class="mc-badge channel">Channel</span>
+          </div>
+          <div class="mc-desc">Agency, broker, bancassurance, affinity channel hierarchy. Sales authority control, commission structure, overriding rates, performance tracking.</div>
+        </div>
+        <div class="module-card">
+          <div class="mc-head">
+            <div class="mc-name">Data Services & Reporting</div>
+            <span class="mc-badge ops">Analytics</span>
+          </div>
+          <div class="mc-desc">Built-in data pipeline, Vector-DB powered enquiries, report management, dashboard configuration, Google Analytics pre-integrated, BI tool ready.</div>
+        </div>
+        <div class="module-card">
+          <div class="mc-head">
+            <div class="mc-name">Customer & CRM</div>
+            <span class="mc-badge channel">Customer</span>
+          </div>
+          <div class="mc-desc">360° customer view, AMLO/blacklist checking, individual and corporate profiles, compliance screening, customer 360 via NoSQL data layer.</div>
+        </div>
+        <div class="module-card">
+          <div class="mc-head">
+            <div class="mc-name">AI Services Layer</div>
+            <span class="mc-badge ops">AI</span>
+          </div>
+          <div class="mc-desc">Pluggable AI service layer pre-integrated into the platform kernel. Ready to connect 3rd party AI/Big Data services without custom integration work.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 — PORTALS -->
+<section id="portals">
+  <div class="section-inner">
+    <div class="label-row reveal">
+      <span class="section-num">02</span>
+      <span class="section-tag">Portals & Access Points</span>
+      <div class="section-dash"></div>
+    </div>
+    <h2 class="section-heading reveal">Six portals. Every<br>user type. One <em>platform.</em></h2>
+    <div class="portals-intro reveal">
+      <div class="portals-count-display">6</div>
+      <p class="portals-statement">
+        Alliance will receive six fully functional, role-controlled user portals — not templates, not mockups. Each portal is product-aware, data-isolated by role and hierarchy, and shares the same underlying API layer. Changes made by your back-office staff reflect immediately across every portal without a new deployment.
+      </p>
+    </div>
+
+    <div class="portals-grid reveal">
+
+      <!-- Portal 1: Staff Workbench -->
+      <div class="portal-card rust">
+        <div class="pc-num">01</div>
+        <div class="pc-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <div class="pc-title">Insurer Staff Workbench</div>
+        <div class="pc-subtitle">Internal Operations Portal</div>
+        <div class="pc-desc">The command center for your internal teams. Every policy, claim, customer record, financial transaction, and configuration is accessible with role-based precision. Underwriters, claims handlers, finance, compliance, and ops all operate from a single, purpose-built interface.</div>
+        <div class="pc-features">
+          <div class="pcf-item">Full policy lifecycle management — quote to renewal</div>
+          <div class="pcf-item">Claims processing, reserve setting, settlement approval</div>
+          <div class="pcf-item">Finance operations — billing, collection, GL posting</div>
+          <div class="pcf-item">Reinsurance cession management and treaty tracking</div>
+          <div class="pcf-item">RBAC — every button, every field, every tab controlled by role</div>
+          <div class="pcf-item">Audit trail on every critical action — immutable log</div>
+          <div class="pcf-item">Bulk operations with file management and monitoring</div>
+          <div class="pcf-item">Embedded report builder and dashboard access</div>
+        </div>
+        <div class="pc-footer">
+          <span class="pc-tag">RBAC</span>
+          <span class="pc-tag">Audit Log</span>
+          <span class="pc-tag">Bulk File</span>
+          <span class="pc-tag">Full Module Access</span>
+          <span class="pc-tag">Report Builder</span>
+        </div>
+      </div>
+
+      <!-- Portal 2: Direct Customer -->
+      <div class="portal-card forest">
+        <div class="pc-num">02</div>
+        <div class="pc-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="pc-title">Direct Customer Portal</div>
+        <div class="pc-subtitle">B2C Self-Service</div>
+        <div class="pc-desc">A branded, self-service portal for individual and corporate policyholders. Customers can purchase, manage their policies, file claims, make payments, and download documents — entirely without calling your staff.</div>
+        <div class="pc-features">
+          <div class="pcf-item">Online quotation with real-time premium calculation</div>
+          <div class="pcf-item">Policy purchase, payment and digital policy delivery</div>
+          <div class="pcf-item">Self-service endorsements and renewals</div>
+          <div class="pcf-item">Claim filing and status tracking</div>
+          <div class="pcf-item">Digital document vault — e-policies, receipts, schedules</div>
+          <div class="pcf-item">Secure login — SSO, 2FA, social login options</div>
+          <div class="pcf-item">Customer 360 view — all policies and history in one place</div>
+        </div>
+        <div class="pc-footer">
+          <span class="pc-tag">SSO/2FA</span>
+          <span class="pc-tag">Online Payment</span>
+          <span class="pc-tag">e-Policy</span>
+          <span class="pc-tag">Claim Filing</span>
+          <span class="pc-tag">Own Data Only</span>
+        </div>
+      </div>
+
+      <!-- Portal 3: Intermediaries -->
+      <div class="portal-card amber">
+        <div class="pc-num">03</div>
+        <div class="pc-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div class="pc-title">Intermediaries Portal</div>
+        <div class="pc-subtitle">Agents, Brokers & Bancassurance</div>
+        <div class="pc-desc">A full-featured portal for your agency, brokerage, and bancassurance channels. Channel users operate within their hierarchy and sales authority — they can only see and transact what they are authorized to. Commission tracking and client management built in.</div>
+        <div class="pc-features">
+          <div class="pcf-item">Quote, bind and issue policies on behalf of customers</div>
+          <div class="pcf-item">Hierarchy-based data visibility — each agent sees only their book</div>
+          <div class="pcf-item">Sales authority control per channel category and qualification</div>
+          <div class="pcf-item">Commission statement access and settlement tracking</div>
+          <div class="pcf-item">Client portfolio management and renewal pipeline</div>
+          <div class="pcf-item">Mobile app access (iOS & Android via React Native)</div>
+          <div class="pcf-item">Document generation — proposals, policy schedules</div>
+        </div>
+        <div class="pc-footer">
+          <span class="pc-tag">Hierarchy Auth</span>
+          <span class="pc-tag">Commission</span>
+          <span class="pc-tag">Mobile App</span>
+          <span class="pc-tag">Sales Authority</span>
+        </div>
+      </div>
+
+      <!-- Portal 4: Affinity -->
+      <div class="portal-card slate">
+        <div class="pc-num">04</div>
+        <div class="pc-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        </div>
+        <div class="pc-title">Affinity Partner Minisite</div>
+        <div class="pc-subtitle">White-Label Partner Storefronts</div>
+        <div class="pc-desc">A configurable, brandable minisite for each affinity partner — banks, telcos, retailers, associations. Partners get their own insurance experience without technical overhead. Each minisite is independently configured on-screen with product selection, pricing rules, and UI layout.</div>
+        <div class="pc-features">
+          <div class="pcf-item">Fully branded per affinity partner — logo, colors, domain</div>
+          <div class="pcf-item">Product selection scoped per partner relationship</div>
+          <div class="pcf-item">Simplified purchase flow tailored to partner's customer base</div>
+          <div class="pcf-item">Group/employee scheme enrollment support</div>
+          <div class="pcf-item">Partner admin access for their own reporting</div>
+          <div class="pcf-item">On-screen configuration — no code change per partner</div>
+        </div>
+        <div class="pc-footer">
+          <span class="pc-tag">White Label</span>
+          <span class="pc-tag">Per-Partner Config</span>
+          <span class="pc-tag">Group Schemes</span>
+          <span class="pc-tag">Partner Admin</span>
+        </div>
+      </div>
+
+      <!-- Portal 5: Aggregator -->
+      <div class="portal-card ink">
+        <div class="pc-num">05</div>
+        <div class="pc-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <div class="pc-title">Aggregator Minisite</div>
+        <div class="pc-subtitle">Price Comparison Connectivity</div>
+        <div class="pc-desc">Ready-to-connect interface for insurance price comparison platforms and aggregators. Alliance OS's API layer exposes comparison-ready endpoints that aggregators consume — your products appear on third-party platforms without custom integrations from your side.</div>
+        <div class="pc-features">
+          <div class="pcf-item">Aggregator-friendly API layer — partner-specific parameter converters</div>
+          <div class="pcf-item">Real-time premium calculation exposure to aggregators</div>
+          <div class="pcf-item">Bind and issue via aggregator platform with policy delivered direct</div>
+          <div class="pcf-item">Product and pricing scoped per aggregator relationship</div>
+          <div class="pcf-item">Integration log visibility — every aggregator call tracked</div>
+        </div>
+        <div class="pc-footer">
+          <span class="pc-tag">API-First</span>
+          <span class="pc-tag">GraphQL APIs</span>
+          <span class="pc-tag">Real-time Rates</span>
+          <span class="pc-tag">Integration Logs</span>
+        </div>
+      </div>
+
+      <!-- Portal 6: Mobile App -->
+      <div class="portal-card warm">
+        <div class="pc-num">06</div>
+        <div class="pc-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+        </div>
+        <div class="pc-title">Mobile Application</div>
+        <div class="pc-subtitle">iOS & Android — React Native</div>
+        <div class="pc-desc">A native mobile application built on React Native for both iOS and Android. Designed primarily for intermediary field agents — enabling them to quote, bind, and manage their clients' policies on the go. The same data layer, same rules, same permissions — mobile-first.</div>
+        <div class="pc-features">
+          <div class="pcf-item">Quote and bind insurance on the go — full product access</div>
+          <div class="pcf-item">Client portfolio and renewal management on mobile</div>
+          <div class="pcf-item">Digital document access — policy schedules, receipts</div>
+          <div class="pcf-item">Push notifications for policy events and renewals</div>
+          <div class="pcf-item">Biometric and PIN authentication — 2FA enabled</div>
+          <div class="pcf-item">Works for both agents and direct customers depending on config</div>
+        </div>
+        <div class="pc-footer">
+          <span class="pc-tag">React Native</span>
+          <span class="pc-tag">iOS + Android</span>
+          <span class="pc-tag">Biometric Auth</span>
+          <span class="pc-tag">Push Notif</span>
+          <span class="pc-tag">Offline Capable</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 03 — ARCHITECTURE -->
+<section id="architecture">
+  <div class="section-inner">
+    <div class="label-row reveal">
+      <span class="section-num">03</span>
+      <span class="section-tag">System Architecture</span>
+      <div class="section-dash"></div>
+    </div>
+    <h2 class="section-heading reveal">Built on layers that<br>were designed to <em>never fail.</em></h2>
+    <p class="section-sub reveal">Alliance OS runs on a tiered microservices architecture deployed on AWS (or your preferred cloud). Every layer is independently scalable, fully observable, and production-hardened across multiple live insurance deployments.</p>
+
+    <div class="arch-diagram reveal">
+      <div class="arch-layer">
+        <div class="al-label">Users</div>
+        <div class="al-nodes">
+          <span class="al-node tier-user">Individual Customer</span>
+          <span class="al-node tier-user">Corporate Policyholder</span>
+          <span class="al-node tier-user">Field Agent / Broker</span>
+          <span class="al-node tier-user">Affinity Member</span>
+          <span class="al-node tier-user">Aggregator Platform</span>
+          <span class="al-node tier-user">Insurer Staff</span>
+          <span class="al-node tier-user">API Partners</span>
+        </div>
+      </div>
+      <div class="arch-arrow">Security Layer — AWS WAF + Firewall + CloudFront</div>
+      <div class="arch-layer">
+        <div class="al-label">Gateway</div>
+        <div class="al-nodes">
+          <span class="al-node tier-gateway">AWS API Gateway / GraphQL — Real-time Endpoints</span>
+          <span class="al-node tier-gateway">Authentication — NextAuth / SSO / OAuth2 / JWT</span>
+          <span class="al-node tier-gateway">Rate Limiting + Circuit Breaker</span>
+          <span class="al-node tier-gateway">Nginx Web Layer</span>
+        </div>
+      </div>
+      <div class="arch-arrow">Authorization Check — RBAC by User Type per API</div>
+      <div class="arch-layer">
+        <div class="al-label">Services</div>
+        <div class="al-nodes">
+          <span class="al-node tier-service">Policy Services</span>
+          <span class="al-node tier-service">Claim Services</span>
+          <span class="al-node tier-service">Reinsurance Services</span>
+          <span class="al-node tier-service">Finance Services</span>
+          <span class="al-node tier-service">Product Services</span>
+          <span class="al-node tier-service">Customer & Sales</span>
+          <span class="al-node tier-service">Channel Services</span>
+          <span class="al-node tier-service">AI Services</span>
+          <span class="al-node tier-service">Alert Services</span>
+          <span class="al-node tier-service">Output Services</span>
+          <span class="al-node tier-service">Async Task Processor</span>
+          <span class="al-node tier-service">File Services (S3)</span>
+        </div>
+      </div>
+      <div class="arch-arrow">All services run on Alliance OS Kernel — Platform, Tenant, Product isolation</div>
+      <div class="arch-layer">
+        <div class="al-label">Data</div>
+        <div class="al-nodes">
+          <span class="al-node tier-data">MySQL (AWS RDS)</span>
+          <span class="al-node tier-data">Postgres (Read Replica)</span>
+          <span class="al-node tier-data">S3 Data Lake (Parquet/JSON)</span>
+          <span class="al-node tier-data">S3 Object Storage</span>
+          <span class="al-node tier-data">Configuration Center (Nacos)</span>
+          <span class="al-node tier-data">Service Registry (Nacos)</span>
+        </div>
+      </div>
+      <div class="arch-arrow">Observability Stack — fully instrumented</div>
+      <div class="arch-layer">
+        <div class="al-label">DevOps</div>
+        <div class="al-nodes">
+          <span class="al-node tier-devops">Prometheus + Grafana (Metrics)</span>
+          <span class="al-node tier-devops">SkyWalking APM (Traces)</span>
+          <span class="al-node tier-devops">ELK Stack (Application Logs)</span>
+          <span class="al-node tier-devops">Loki + Grafana (Log Aggregation)</span>
+          <span class="al-node tier-devops">AWS CodePipeline CI/CD</span>
+          <span class="al-node tier-devops">CloudWatch + Alerts</span>
+          <span class="al-node tier-devops">Google Analytics (Pre-integrated)</span>
+        </div>
+      </div>
+      <div class="arch-arrow">External integrations via standard protocols</div>
+      <div class="arch-layer">
+        <div class="al-label">External</div>
+        <div class="al-nodes">
+          <span class="al-node tier-ext">General Ledger</span>
+          <span class="al-node tier-ext">SMS / Email / Social</span>
+          <span class="al-node tier-ext">Payment Gateways</span>
+          <span class="al-node tier-ext">AMLO / Blacklist</span>
+          <span class="al-node tier-ext">3rd Party AI</span>
+          <span class="al-node tier-ext">Document Management</span>
+          <span class="al-node tier-ext">Data Lake / BI Tools</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="arch-specs reveal">
+      <div class="arch-spec">
+        <div class="as-val">2,894</div>
+        <div class="as-label">Total APIs</div>
+      </div>
+      <div class="arch-spec">
+        <div class="as-val">AES-256</div>
+        <div class="as-label">PII Encryption</div>
+      </div>
+      <div class="arch-spec">
+        <div class="as-val">TLSv1.3</div>
+        <div class="as-label">Data in Transit</div>
+      </div>
+      <div class="arch-spec">
+        <div class="as-val">R/W Split</div>
+        <div class="as-label">DB Architecture</div>
+      </div>
+      <div class="arch-spec">
+        <div class="as-val">Multi-AZ</div>
+        <div class="as-label">AWS Availability</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 — DEPLOYMENT -->
+<section id="deployment">
+  <div class="section-inner">
+    <div class="label-row reveal">
+      <span class="section-num">04</span>
+      <span class="section-tag">How We Deploy</span>
+      <div class="section-dash"></div>
+    </div>
+    <h2 class="section-heading reveal">Deployment that respects<br>your <em>business hours.</em></h2>
+    <div class="deploy-intro-grid">
+      <div class="deploy-text reveal">
+        <p class="deploy-body">
+          Alliance OS operates a one-click CI/CD deployment pipeline via GitHub Actions and AWS CodePipeline. Every change — Next.js frontend, Node.js services, database migrations, and UI updates — is containerized via Docker and deployed automatically to our Kubernetes (AWS EKS) clusters with all unit test cases executed. Thanks to EKS rolling deployments, our target for both hotfixes and major releases is zero downtime. Kubernetes seamlessly drains traffic from old pods and routes it to new ones.
+        </p>
+        <p class="deploy-body">
+          The platform uses a structured branching model (Master → Release → Develop → Feature) that mirrors four live environments: Prod, UAT, Test, and Enhance/Local. Configuration management follows the same flow, ensuring configuration releases are always tracked alongside code.
+        </p>
+        <div class="deploy-checklist">
+          <div class="dc-item">
+            <div class="dc-check">✓</div>
+            <div class="dc-text"><strong>Zero-downtime hotfix deployments</strong> — critical fixes deployed to production without taking down the system</div>
+          </div>
+          <div class="dc-item">
+            <div class="dc-check">✓</div>
+            <div class="dc-text"><strong>One-click pipeline</strong> — all changes built, tested, and deployed automatically via GitHub Actions</div>
+          </div>
+          <div class="dc-item">
+            <div class="dc-check">✓</div>
+            <div class="dc-text"><strong>On-screen data patch management</strong> — production data corrections go through a submit → approve → execute workflow with full audit</div>
+          </div>
+          <div class="dc-item">
+            <div class="dc-check">✓</div>
+            <div class="dc-text"><strong>On-screen release management</strong> — configurations packaged and released through a managed approval workflow, not ad-hoc</div>
+          </div>
+          <div class="dc-item">
+            <div class="dc-check">✓</div>
+            <div class="dc-text"><strong>Rollback capability</strong> — every production deployment has a tested rollback path executed if verification fails</div>
+          </div>
+          <div class="dc-item">
+            <div class="dc-check">✓</div>
+            <div class="dc-text"><strong>Multi-environment parity</strong> — what is tested in UAT is exactly what is deployed to production. No environment drift.</div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="deploy-stack">
+          <div class="ds-category">Web Layer</div>
+          <div class="ds-tags">
+            <span class="ds-tag">React</span>
+            <span class="ds-tag">Tailwind CSS v4</span>
+            <span class="ds-tag">shadcn/ui</span>
+            <span class="ds-tag">Next.js (App Router)</span>
+            <span class="ds-tag">React Native / PWA</span>
+          </div>
+          <div class="ds-category">Service Layer</div>
+          <div class="ds-tags">
+            <span class="ds-tag">Node.js</span>
+            <span class="ds-tag">TypeScript</span>
+            <span class="ds-tag">Prisma / Drizzle ORM</span>
+            <span class="ds-tag">Zod</span>
+            <span class="ds-tag">tRPC / GraphQL</span>
+            <span class="ds-tag">Kafka</span>
+            <span class="ds-tag">Docker</span>
+            <span class="ds-tag">AWS EKS (Kubernetes)</span>
+            <span class="ds-tag">AWS API Gateway</span>
+          </div>
+          <div class="ds-category">Data Layer</div>
+          <div class="ds-tags">
+            <span class="ds-tag">PostgreSQL 16</span>
+            <span class="ds-tag">Redis (Upstash)</span>
+            <span class="ds-tag">OpenSearch</span>
+            <span class="ds-tag">DynamoDB</span>
+            <span class="ds-tag">AWS S3</span>
+          </div>
+          <div class="ds-category">DevOps & Testing</div>
+          <div class="ds-tags">
+            <span class="ds-tag">GitHub Actions</span>
+            <span class="ds-tag">AWS CodePipeline</span>
+            <span class="ds-tag">Turborepo</span>
+            <span class="ds-tag">Jest / Vitest</span>
+            <span class="ds-tag">Cypress</span>
+            <span class="ds-tag">Playwright</span>
+            <span class="ds-tag">ESLint / Prettier</span>
+            <span class="ds-tag">Cursor / Copilot</span>
+          </div>
+          <div class="ds-category">Monitoring</div>
+          <div class="ds-tags">
+            <span class="ds-tag">Prometheus</span>
+            <span class="ds-tag">Grafana</span>
+            <span class="ds-tag">Datadog</span>
+            <span class="ds-tag">AWS CloudWatch</span>
+            <span class="ds-tag">Sentry</span>
+            <span class="ds-tag">CloudWatch</span>
+            <span class="ds-tag">Kibana</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="deploy-sla-grid reveal">
+      <div class="sla-card">
+        <div class="sla-top">≤10 min</div>
+        <div class="sla-unit">Deployment Downtime</div>
+        <div class="sla-desc">Kubernetes rolling updates ensure no traffic is dropped. 100% of deployments run without interruption.</div>
+      </div>
+      <div class="sla-card">
+        <div class="sla-top">0 min</div>
+        <div class="sla-unit">Hotfix & Ad-hoc Downtime</div>
+        <div class="sla-desc">Emergency fixes and ad-hoc deployments are deployed without any downtime using rolling deployment and session persistence.</div>
+      </div>
+      <div class="sla-card">
+        <div class="sla-top">100%</div>
+        <div class="sla-unit">Containerized Infrastructure</div>
+        <div class="sla-desc">Every service runs in isolated Docker containers orchestrated by AWS EKS, guaranteeing parity between local, test, and production.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 — TIMELINE -->
+<section id="timeline">
+  <div class="section-inner">
+    <div class="label-row reveal">
+      <span class="section-num">05</span>
+      <span class="section-tag">Project Timeline</span>
+      <div class="section-dash"></div>
+    </div>
+    <h2 class="section-heading reveal">From kick-off to <em>go-live</em> —<br>a clear, committed plan.</h2>
+    <p class="section-sub reveal" style="margin-bottom:0;">Each phase is structured with defined deliverables, acceptance milestones, and dedicated environments. Configuration work happens in parallel with infrastructure setup — no waiting around.</p>
+
+    <div class="timeline-track reveal">
+      <div class="timeline-spine"></div>
+      <div class="timeline-progress"></div>
+      <div class="timeline-phases">
+
+        <div class="tl-phase done">
+          <div class="tl-dot"></div>
+          <div class="tl-duration">Months 1–2</div>
+          <div class="tl-name">Discovery & Foundation</div>
+          <div class="tl-items">
+            <div class="tl-item">Business requirements & product mapping</div>
+            <div class="tl-item">Infrastructure provisioning on AWS</div>
+            <div class="tl-item">Alliance OS base instance setup</div>
+            <div class="tl-item">Data migration strategy & staging DB design</div>
+            <div class="tl-item">Integration architecture sign-off</div>
+            <div class="tl-item">Team onboarding & access provisioning</div>
+          </div>
+        </div>
+
+        <div class="tl-phase active">
+          <div class="tl-dot"></div>
+          <div class="tl-duration">Months 3–5</div>
+          <div class="tl-name">Product & Channel Configuration</div>
+          <div class="tl-items">
+            <div class="tl-item">Insurance product setup on-screen</div>
+            <div class="tl-item">Underwriting rules & rate tables</div>
+            <div class="tl-item">Sales channel & commission structure</div>
+            <div class="tl-item">Metadata and UI configurator setup</div>
+            <div class="tl-item">Reinsurance treaty configuration</div>
+            <div class="tl-item">Finance & GL configuration</div>
+          </div>
+        </div>
+
+        <div class="tl-phase">
+          <div class="tl-dot"></div>
+          <div class="tl-duration">Months 6–8</div>
+          <div class="tl-name">Portal Build & Integrations</div>
+          <div class="tl-items">
+            <div class="tl-item">All 6 portals configured and deployed to UAT</div>
+            <div class="tl-item">Mobile app build & testing</div>
+            <div class="tl-item">3rd party integrations (payment, SMS, GL)</div>
+            <div class="tl-item">API partner enablement</div>
+            <div class="tl-item">Claims & finance workflow testing</div>
+            <div class="tl-item">Performance & security testing (JMeter, VA/PT)</div>
+          </div>
+        </div>
+
+        <div class="tl-phase">
+          <div class="tl-dot"></div>
+          <div class="tl-duration">Months 9–10</div>
+          <div class="tl-name">UAT & Data Migration</div>
+          <div class="tl-items">
+            <div class="tl-item">User acceptance testing with Alliance teams</div>
+            <div class="tl-item">Data migration dry run from legacy system</div>
+            <div class="tl-item">Defect resolution and regression testing</div>
+            <div class="tl-item">Training — all user roles and portals</div>
+            <div class="tl-item">Disaster recovery drill and sign-off</div>
+            <div class="tl-item">Go-live readiness checklist completion</div>
+          </div>
+        </div>
+
+        <div class="tl-phase">
+          <div class="tl-dot"></div>
+          <div class="tl-duration">Month 11+</div>
+          <div class="tl-name">Go-Live & Stabilization</div>
+          <div class="tl-items">
+            <div class="tl-item">Phased go-live (start with 1–2 products)</div>
+            <div class="tl-item">Hypercare support — Sayaintel team on standby</div>
+            <div class="tl-item">Full production monitoring activated</div>
+            <div class="tl-item">Remaining products and portals rollout</div>
+            <div class="tl-item">Post go-live SLA support begins</div>
+            <div class="tl-item">Handover to steady-state support model</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 — MAINTAIN -->
+<section id="maintain">
+  <div class="section-inner">
+    <div class="label-row reveal">
+      <span class="section-num">06</span>
+      <span class="section-tag">How We Maintain</span>
+      <div class="section-dash"></div>
+    </div>
+    <h2 class="section-heading reveal">We don't hand over and<br>disappear. <em>We stay.</em></h2>
+    <p class="section-sub reveal">Sayaintel operates a structured maintenance model covering open-source components, platform upgrades, testing, monitoring, and everything in between — so your team can focus on business, not systems.</p>
+
+    <div class="maintain-grid reveal">
+
+      <div class="maintain-card">
+        <div class="mc2-num">01</div>
+        <div class="mc2-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="mc2-title">Real-Time Monitoring Stack</div>
+        <div class="mc2-desc">Every component of the system is monitored 24/7 using a pre-integrated observability stack. Alerts fire before issues become outages.</div>
+        <div class="mc2-specs">
+          <div class="mc2-spec">
+            <span class="mc2-spec-label">Infrastructure Metrics</span>
+            <span class="mc2-spec-val">Prometheus + Grafana</span>
+          </div>
+          <div class="mc2-spec">
+            <span class="mc2-spec-label">Application Performance</span>
+            <span class="mc2-spec-val">SkyWalking APM</span>
+          </div>
+          <div class="mc2-spec">
+            <span class="mc2-spec-label">Log Aggregation</span>
+            <span class="mc2-spec-val">ELK / Loki + Grafana</span>
+          </div>
+          <div class="mc2-spec">
+            <span class="mc2-spec-label">Integration Logs</span>
+            <span class="mc2-spec-val">Built-in (full request/response)</span>
+          </div>
+          <div class="mc2-spec">
+            <span class="mc2-spec-label">User Analytics</span>
+            <span class="mc2-spec-val">Google Analytics (pre-integrated)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="maintain-card">
+        <div class="mc2-num">02</div>
+        <div class="mc2-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <div class="mc2-title">Node.js & Security Governance</div>
+        <div class="mc2-desc">Sayaintel reviews open-source components monthly and monitors emergency notices from the community. Every upgrade goes through impact analysis, client notification, and tested deployment.</div>
+        <div class="mc2-specs">
+          <div class="mc2-spec">
+            <span class="mc2-spec-label">Postgres Minor Upgrade</span>
+            <span class="mc2-spec-val">6+ months after release</span>
+          </div>
+          <div class="mc2-spec">
+            <span class="mc2-spec-label">Postgres Major Upgrade</span>
+            <span class="mc2-spec-val">2+ years after release</span>
+          </div>
+          <div class="mc2-spec">
+            <span class="mc2-spec-label">Next.js / React Minor</span>
+            <span class="mc2-spec-val">6+ months after release</span>
+          </div>
+          <div class="mc2-spec">
+            <span class="mc2-spec-label">Node.js LTS Updates</span>
+            <span class="mc2-spec-val">2+ years after release</span>
+          </div>
+          <div class="mc2-spec">
+            <span class="mc2-spec-label">Emergency Security Patches</span>
+            <span class="mc2-spec-val">Reviewed within 24h</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="maintain-card">
+        <div class="mc2-num">03</div>
+        <div class="mc2-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+        </div>
+        <div class="mc2-title">Housekeeping & Archival Automation</div>
+        <div class="mc2-desc">The platform ships with pre-configured rules for automatic data housekeeping, archival, and purge. High-volume tables are managed transparently — performance stays consistent as data grows.</div>
+        <div class="mc2-specs">
+          <div class="mc2-spec">
+            <span class="mc2-spec-label">Integration Logs</span>
+            <span class="mc2-spec-val">Archive after 1 year</span>
+          </div>
+          <div class="mc2-spec">
+            <span class="mc2-spec-label">Application Logs</span>
+            <span class="mc2-spec-val">Rotate daily, archive 6 months</span>
+          </div>
+          <div class="mc2-spec">
+            <span class="mc2-spec-label">GL Accounting Entries</span>
+            <span class="mc2-spec-val">Archive to log tables after 7 days</span>
+          </div>
+          <div class="mc2-spec">
+            <span class="mc2-spec-label">Job Execution History</span>
+            <span class="mc2-spec-val">Archive after 6 months</span>
+          </div>
+          <div class="mc2-spec">
+            <span class="mc2-spec-label">All rules</span>
+            <span class="mc2-spec-val">Configurable on-screen</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="maintain-card">
+        <div class="mc2-num">04</div>
+        <div class="mc2-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <div class="mc2-title">Automated Testing Before Every Deployment</div>
+        <div class="mc2-desc">Every deployment cycle triggers the full automated testing framework — unit, API, UI, performance, and security — before anything reaches production. Defects are caught before users see them.</div>
+        <div class="mc2-specs">
+          <div class="mc2-spec">
+            <span class="mc2-spec-label">Unit Tests</span>
+            <span class="mc2-spec-val">JUnit — auto-triggered on build</span>
+          </div>
+          <div class="mc2-spec">
+            <span class="mc2-spec-label">API Tests</span>
+            <span class="mc2-spec-val">Postman collection — per deployment</span>
+          </div>
+          <div class="mc2-spec">
+            <span class="mc2-spec-label">UI Regression</span>
+            <span class="mc2-spec-val">Cypress — automated browser tests</span>
+          </div>
+          <div class="mc2-spec">
+            <span class="mc2-spec-label">Performance Testing</span>
+            <span class="mc2-spec-val">Playwright load & UI testing</span>
+          </div>
+          <div class="mc2-spec">
+            <span class="mc2-spec-label">Security Scanning</span>
+            <span class="mc2-spec-val">SonarQube + 3rd party VA/PT</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 07 — EVENTS -->
+<section id="events">
+  <div class="section-inner">
+    <div class="label-row reveal">
+      <span class="section-num">07</span>
+      <span class="section-tag">Incident Response</span>
+      <div class="section-dash"></div>
+    </div>
+    <h2 class="section-heading reveal">When things go wrong,<br>here is <em>exactly</em> what happens.</h2>
+    <div class="events-grid">
+      <div class="reveal">
+        <p style="font-size:0.95rem;color:var(--ink-3);line-height:1.8;margin-bottom:32px;">Every incident is classified by severity. Response times, escalation paths, and resolution commitments are pre-defined and agreed upon — not improvised under pressure. Alliance will always know who is on it and when it will be resolved.</p>
+        <div class="severity-table">
+          <div class="st-head">
+            <div>Severity</div>
+            <div>Condition</div>
+            <div>Response</div>
+            <div>Resolution Target</div>
+          </div>
+          <div class="st-row">
+            <div><span class="sev-badge s1">S1</span></div>
+            <div class="st-cell">Full system outage or data integrity failure in production</div>
+            <div class="st-cell mono">≤ 30 min</div>
+            <div class="st-cell mono">≤ 4 hours</div>
+          </div>
+          <div class="st-row">
+            <div><span class="sev-badge s2">S2</span></div>
+            <div class="st-cell">Critical feature unavailable — policy issuance, payments, claims</div>
+            <div class="st-cell mono">≤ 2 hours</div>
+            <div class="st-cell mono">≤ 8 hours</div>
+          </div>
+          <div class="st-row">
+            <div><span class="sev-badge s3">S3</span></div>
+            <div class="st-cell">Non-critical feature degraded or workaround available</div>
+            <div class="st-cell mono">≤ 8 hours</div>
+            <div class="st-cell mono">≤ 3 days</div>
+          </div>
+          <div class="st-row">
+            <div><span class="sev-badge s4">S4</span></div>
+            <div class="st-cell">Minor issue, cosmetic, enhancement request</div>
+            <div class="st-cell mono">Next business day</div>
+            <div class="st-cell mono">Scheduled release</div>
+          </div>
+        </div>
+      </div>
+      <div class="incident-flow reveal">
+        <div class="if-step">
+          <div class="if-num">1</div>
+          <div>
+            <div class="if-title">Detection — Automated Alerts Fire</div>
+            <div class="if-desc">Datadog, Sentry, and AWS CloudWatch continuously monitor all components. Alerts trigger automatically the moment thresholds are crossed — before users report anything.</div>
+          </div>
+        </div>
+        <div class="if-step">
+          <div class="if-num">2</div>
+          <div>
+            <div class="if-title">Triage & Severity Classification</div>
+            <div class="if-desc">On-call engineer reviews alert within SLA window. Impact assessed, severity assigned, appropriate escalation path activated. Alliance Ops Team is notified immediately for S1/S2.</div>
+          </div>
+        </div>
+        <div class="if-step">
+          <div class="if-num">3</div>
+          <div>
+            <div class="if-title">Active Remediation</div>
+            <div class="if-desc">Sayaintel engineering team engages. Logs analyzed via Datadog, traces reviewed via Sentry, integration logs reviewed for third-party failures. Hotfix prepared if needed.</div>
+          </div>
+        </div>
+        <div class="if-step">
+          <div class="if-num">4</div>
+          <div>
+            <div class="if-title">Fix Deployed — Zero-Downtime</div>
+            <div class="if-desc">Hotfix deployed via CI/CD pipeline with no system downtime. Deployment goes through test verification before production. Rollback available within minutes if needed.</div>
+          </div>
+        </div>
+        <div class="if-step">
+          <div class="if-num">5</div>
+          <div>
+            <div class="if-title">Post-Incident Review & Prevention</div>
+            <div class="if-desc">Root cause analysis documented and shared. Platform-level fix or monitoring rule added to prevent recurrence. Issue tracked in change management system with full transparency.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 — TRAITS -->
+<section id="traits">
+  <div class="section-inner">
+    <div class="label-row reveal">
+      <span class="section-num">08</span>
+      <span class="section-tag">Why Sayaintel & Alliance OS</span>
+      <div class="section-dash"></div>
+    </div>
+    <h2 class="section-heading reveal">What no one else<br>can offer <em>Alliance.</em></h2>
+    <p class="traits-intro reveal">
+      Every platform vendor will tell you they are configurable, scalable, and secure. What sets Alliance OS apart is not a feature list — it is a philosophy of reducing your dependency on developers, your cost of change, and your time to market. Here is what that means in practice.
+    </p>
+    <div class="traits-grid">
+
+      <div class="trait-card featured reveal">
+        <div>
+          <div class="tc-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" stroke="rgba(255,255,255,0.6)" fill="none" stroke-width="1.5"/></svg>
+          </div>
+          <div class="tc-title">Bespoke, Absolute Ownership</div>
+          <div class="tc-desc">Instead of paying perpetual licensing fees for an inflexible black-box system, you own the intellectual property. Alliance OS is built for your exact workflows. Customization is infinite, integrations are native, and there is zero vendor lock-in. You dictate the roadmap, not a vendor.</div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;">
+          <div>
+            <div class="tc-highlight" style="font-family:'Playfair Display',serif;font-size:clamp(3rem, 5vw, 5rem);font-weight:900;color:rgba(255,255,255,0.08);line-height:1;margin-bottom:16px;">100%<br>Yours.</div>
+            <div style="font-size:0.8rem;color:rgba(255,255,255,0.3);line-height:1.6;">A proprietary asset on your balance sheet. Absolute control over data security, UX/UI decisions, integrations, and feature rollouts without waiting for vendor release cycles.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trait-card reveal">
+        <div class="tc-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="tc-title">Security Baked In — Not Bolted On</div>
+        <div class="tc-desc">AES-256 PII encryption, TLSv1.3 data in transit, BCrypt-11 passwords, WAF protection, anti-fraud URL encryption, data masking per role, immutable audit trail, SSO/SAML/OAuth2 — every one of these is in the platform by default, not added later.</div>
+      </div>
+
+      <div class="trait-card reveal">
+        <div class="tc-icon-wrap">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </div>
+        <div class="tc-title">API-First Platform — Every Feature Exposed</div>
+        <div class="tc-desc">Every function in the system is accessible via API. GraphQL and REST APIs, categorized by user type, with dynamic parameter converters to create partner-friendly APIs for any integration without modifying core services. Build your ecosystem — aggregators, partners, IoT — on top.</div>
+      </div>
+
+      <div class="trait-card reveal">
+        <div class="tc-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div class="tc-title">Disaster Recovery With Real SLAs</div>
+        <div class="tc-desc">RTO ≤6 hours, RPO ≤15 minutes. Not aspirational — documented in a full RACI matrix with step-by-step recovery procedures, parallel execution paths, and Sayaintel engineers assigned at each step. Tested before go-live. Drilled annually.</div>
+      </div>
+
+      <div class="trait-card reveal">
+        <div class="tc-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <div class="tc-title">Multi-Tenant With Real Data Isolation</div>
+        <div class="tc-desc">Alliance can run multiple business units, lines of business, and products — all under one Alliance OS instance — with complete data and logic isolation per tenant. No data leakage. No configuration bleed. Each tenant operates independently with shared infrastructure cost savings.</div>
+      </div>
+
+      <div class="trait-card reveal">
+        <div class="tc-icon-wrap">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <div class="tc-title">Handles 100M+ Record Tables Natively</div>
+        <div class="tc-desc">The data service architecture separates hot and cold data, uses AWS S3 for big data scenarios, and employs read-write splitting with Postgres read replicas. Policy tables, transaction histories, and audit logs scale without re-architecture — ever.</div>
+      </div>
+
+        <div class="trait-card reveal">
+          <div class="tc-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+          </div>
+          <div class="tc-title">Immutable Audit & Integrity</div>
+          <div class="tc-desc">Triple-entry accounting principles applied to core data. Every policy mutation, every claim adjustment, and every financial transaction is logged cryptographically. Data isn't just saved; its integrity is mathematically guaranteed.</div>
+        </div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- 09 — EXPERIENCE -->
+<section id="experience">
+  <div class="section-inner">
+    <div class="label-row reveal">
+      <span class="section-num">09</span>
+      <span class="section-tag">Seamless Experience</span>
+      <div class="section-dash"></div>
+    </div>
+    <h2 class="section-heading reveal">Every user. Every device.<br>Every workflow. <em>Smooth.</em></h2>
+    <div class="exp-grid">
+      <div class="exp-left reveal">
+        <div class="exp-feature">
+          <div class="ef-icon">
+            <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <div>
+            <div class="ef-title">Zero Latency — Next.js Edge APIs Respond in Milliseconds</div>
+            <div class="ef-desc">By decoupling the frontend from the core engine using Next.js and a GraphQL API layer, UI interactions are instantaneous. Operations don't wait for monolithic database locks.</div>
+          </div>
+        </div>
+        <div class="exp-feature">
+          <div class="ef-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+          </div>
+          <div>
+            <div class="ef-title">Dynamic Canvas — Different Flows Per Channel</div>
+            <div class="ef-desc">The Object-Centric Canvas supports role-based dynamic layouts with distinct configurations for agent channels (B2B) and direct customers (B2C). No one sees more than they should, and no one is forced through screens that don't apply to them.</div>
+          </div>
+        </div>
+        <div class="exp-feature">
+          <div class="ef-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <div>
+            <div class="ef-title">Everything Is Signable, Digital, and Delivered</div>
+            <div class="ef-desc">e-Policy generation, email and SMS delivery, digital payment collection, and automated renewals — the entire customer journey runs digitally. No paper required. Integration with your preferred communication providers handled via the built-in communication configuration layer.</div>
+          </div>
+        </div>
+        <div class="exp-feature">
+          <div class="ef-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div>
+            <div class="ef-title">Compliance Built Into the Workflow</div>
+            <div class="ef-desc">AMLO checks, compliance screening, blacklist verification, and regulatory declaration capture are embedded into the policy submission workflow — not a separate step, not a manual checklist. Compliance happens automatically as part of the process.</div>
+          </div>
+        </div>
+        <div class="exp-feature">
+          <div class="ef-icon">
+            <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+          </div>
+          <div>
+            <div class="ef-title">Native Mobile — Not a Responsive Web</div>
+            <div class="ef-desc">The mobile app is built in React Native — a true native application for iOS and Android. It is not a responsive website wrapped in an app. Field agents get a purpose-built mobile experience that works at the speed they need in the field.</div>
+          </div>
+        </div>
+      </div>
+      <div class="exp-right reveal">
+        <div class="exp-widget">
+          <div class="ew-label">Policy Issuance — Typical Flow Time</div>
+          <div class="ew-val">&lt; 90 sec</div>
+          <div class="ew-sub">From quote to digital policy delivery (simple product)</div>
+        </div>
+        <div class="exp-widget">
+          <div class="ew-label">Supported Login Methods</div>
+          <div class="ew-val">7</div>
+          <div class="ew-sub">Username/PIN, LDAP, 2FA, Token, SSO, SAML 2.0, OAuth2 / JWT</div>
+        </div>
+        <div class="exp-widget">
+          <div class="ew-label">Event Streams</div>
+          <div class="ew-val">Kafka</div>
+          <div class="ew-sub">GraphQL, REST, WebSocket, Kafka Topics, S3 Data Lakes</div>
+        </div>
+        <div class="exp-widget">
+          <div class="ew-label">API Response — 99th Percentile</div>
+          <div class="ew-val">≤ 5s</div>
+          <div class="ew-sub">Even for complex batch operations — upload 1,000 collection records with matching</div>
+        </div>
+        <div class="exp-widget">
+          <div class="ew-label">Serverless Async Task Types</div>
+          <div class="ew-val">∞</div>
+          <div class="ew-sub">Email, SMS, GL posting, recurring payment, commission settlement — all async, all monitored</div>
+        </div>
+        <div class="exp-widget">
+          <div class="ew-label">Generated Output Documents</div>
+          <div class="ew-val">PDF, HTML, Excel</div>
+          <div class="ew-sub">Policies, schedules, statements, reports — all configurable on-screen without development</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 — CLOSING -->
+<section id="closing">
+  <div class="closing-pattern"></div>
+  <div class="section-inner">
+    <div class="label-row reveal">
+      <span class="section-num">10</span>
+      <span class="section-tag">Let's Begin</span>
+      <div class="section-dash"></div>
+    </div>
+    <h2 class="section-heading reveal">Alliance deserves an<br>insurance OS built for <em>2030,</em><br>not 2009.</h2>
+    <div class="closing-grid">
+      <div class="reveal">
+        <p class="closing-statement">
+          "Alliance OS is not a new system to learn. It is the infrastructure your business will grow on — with portals your staff will love, APIs your partners will integrate with, and a platform your IT team will never have to fight."
+        </p>
+        <div class="cta-block">
+          <a href="mailto:proposal@Sayaintel.com" class="cta-primary">
+            Schedule a platform walkthrough <span>→</span>
+          </a>
+          <a href="mailto:proposal@Sayaintel.com" class="cta-secondary">
+            Request a live demo environment <span>→</span>
+          </a>
+          <a href="mailto:proposal@Sayaintel.com" class="cta-secondary">
+            Discuss scope and commercial terms <span>→</span>
+          </a>
+        </div>
+      </div>
+      <div class="closing-details reveal">
+        <div class="cd-item">
+          <span class="cd-label">Proposal Prepared By</span>
+          <span class="cd-val">Sayaintel Corporation</span>
+        </div>
+        <div class="cd-item">
+          <span class="cd-label">Platform</span>
+          <span class="cd-val">Alliance OS © 2025</span>
+        </div>
+        <div class="cd-item">
+          <span class="cd-label">Prepared For</span>
+          <span class="cd-val">Alliance Insurance</span>
+        </div>
+        <div class="cd-item">
+          <span class="cd-label">Portals in Scope</span>
+          <span class="cd-val">6 Portals</span>
+        </div>
+        <div class="cd-item">
+          <span class="cd-label">Modules Covered</span>
+          <span class="cd-val">Policy, Claims, RI, Finance, Sales, Data, AI</span>
+        </div>
+        <div class="cd-item">
+          <span class="cd-label">Target Go-Live</span>
+          <span class="cd-val">Phase 1 — Q4 2026</span>
+        </div>
+        <div class="cd-item">
+          <span class="cd-label">Deployment Model</span>
+          <span class="cd-val">AWS Cloud — Multi-AZ</span>
+        </div>
+        <div class="cd-item">
+          <span class="cd-label">Status</span>
+          <span class="cd-val" style="color:#6AC0A3;">Open for Discussion</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">Sayaintel × Alliance Insurance — 2026</div>
+  <div class="footer-note">COMMERCIAL IN CONFIDENCE — Not for distribution</div>
+</footer>
+
+<script>
+// Intersection Observer for reveal animations
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+revealEls.forEach(el => observer.observe(el));
+
+// Stagger sibling reveals
+document.querySelectorAll('.portals-grid, .traits-grid, .maintain-grid, .arch-specs, .deploy-sla-grid').forEach(grid => {
+  const children = grid.querySelectorAll('.reveal');
+  children.forEach((child, i) => {
+    child.style.transitionDelay = (i * 80) + 'ms';
+  });
+});
+</script>
+</div>
+</body>
+</html>
+
