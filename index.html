@@ -1202,7 +1202,7 @@ section { position: relative; }
             <div class="mc-name">Data Services & Reporting</div>
             <span class="mc-badge ops">Analytics</span>
           </div>
-          <div class="mc-desc">Built-in data pipeline, Vector-DB powered enquiries, report management, dashboard configuration, Google Analytics pre-integrated, BI tool ready.</div>
+          <div class="mc-desc">Built-in data pipeline, pgvector-powered AI similarity search, report management, dashboard configuration, Google Analytics pre-integrated, BI tool ready.</div>
         </div>
         <div class="module-card">
           <div class="mc-head">
@@ -1457,12 +1457,12 @@ section { position: relative; }
       <div class="arch-layer">
         <div class="al-label">Data</div>
         <div class="al-nodes">
-          <span class="al-node tier-data">MySQL (AWS RDS)</span>
+          <span class="al-node tier-data">PostgreSQL 16 (AWS RDS)</span>
           <span class="al-node tier-data">Postgres (Read Replica)</span>
           <span class="al-node tier-data">S3 Data Lake (Parquet/JSON)</span>
           <span class="al-node tier-data">S3 Object Storage</span>
-          <span class="al-node tier-data">Configuration Center (Nacos)</span>
-          <span class="al-node tier-data">Service Registry (Nacos)</span>
+          <span class="al-node tier-data">AWS Systems Manager (Parameter Store)</span>
+          <span class="al-node tier-data">AWS Cloud Map (Service Registry)</span>
         </div>
       </div>
       <div class="arch-arrow">Observability Stack — fully instrumented</div>
@@ -1495,8 +1495,8 @@ section { position: relative; }
 
     <div class="arch-specs reveal">
       <div class="arch-spec">
-        <div class="as-val">2,894</div>
-        <div class="as-label">Total APIs</div>
+        <div class="as-val">100%</div>
+        <div class="as-label">API Coverage</div>
       </div>
       <div class="arch-spec">
         <div class="as-val">AES-256</div>
@@ -1587,7 +1587,7 @@ section { position: relative; }
           <div class="ds-category">Data Layer</div>
           <div class="ds-tags">
             <span class="ds-tag">PostgreSQL 16</span>
-            <span class="ds-tag">Redis (Upstash)</span>
+            <span class="ds-tag">AWS ElastiCache (Redis)</span>
             <span class="ds-tag">OpenSearch</span>
             <span class="ds-tag">DynamoDB</span>
             <span class="ds-tag">AWS S3</span>
@@ -1654,7 +1654,7 @@ section { position: relative; }
 
         <div class="tl-phase done">
           <div class="tl-dot"></div>
-          <div class="tl-duration">Months 1–2</div>
+          <div class="tl-duration">Months 1&ndash;2</div>
           <div class="tl-name">Discovery & Foundation</div>
           <div class="tl-items">
             <div class="tl-item">Business requirements & product mapping</div>
@@ -1668,7 +1668,7 @@ section { position: relative; }
 
         <div class="tl-phase active">
           <div class="tl-dot"></div>
-          <div class="tl-duration">Months 3–5</div>
+          <div class="tl-duration">Months 3&ndash;4</div>
           <div class="tl-name">Product & Channel Configuration</div>
           <div class="tl-items">
             <div class="tl-item">Insurance product setup on-screen</div>
@@ -1682,7 +1682,7 @@ section { position: relative; }
 
         <div class="tl-phase">
           <div class="tl-dot"></div>
-          <div class="tl-duration">Months 6–8</div>
+          <div class="tl-duration">Months 5&ndash;6</div>
           <div class="tl-name">Portal Build & Integrations</div>
           <div class="tl-items">
             <div class="tl-item">All 6 portals configured and deployed to UAT</div>
@@ -1696,7 +1696,7 @@ section { position: relative; }
 
         <div class="tl-phase">
           <div class="tl-dot"></div>
-          <div class="tl-duration">Months 9–10</div>
+          <div class="tl-duration">Month 7</div>
           <div class="tl-name">UAT & Data Migration</div>
           <div class="tl-items">
             <div class="tl-item">User acceptance testing with Alliance teams</div>
@@ -1710,10 +1710,10 @@ section { position: relative; }
 
         <div class="tl-phase">
           <div class="tl-dot"></div>
-          <div class="tl-duration">Month 11+</div>
+          <div class="tl-duration">Month 8</div>
           <div class="tl-name">Go-Live & Stabilization</div>
           <div class="tl-items">
-            <div class="tl-item">Phased go-live (start with 1–2 products)</div>
+            <div class="tl-item">Phased go-live (start with 1&ndash;2 products)</div>
             <div class="tl-item">Hypercare support — Sayaintel team on standby</div>
             <div class="tl-item">Full production monitoring activated</div>
             <div class="tl-item">Remaining products and portals rollout</div>
@@ -2004,6 +2004,15 @@ section { position: relative; }
         <div class="tc-icon-wrap">
           <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
         </div>
+        
+        <div class="trait-card reveal">
+          <div class="tc-icon-wrap">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" fill="none" stroke-width="1.5"/></svg>
+          </div>
+          <div class="tc-title">Tanzanian Compliance & Data Residency</div>
+          <div class="tc-desc">Fully aligned with TIRA regulations and the Tanzania Personal Data Protection Act (PDPA). Hosted natively in AWS af-south-1 (Cape Town) ensuring absolute data residency within the African continent. Developed following ISO 27001 and SOC 2 Type II controls.</div>
+        </div>
+
         <div class="tc-title">Disaster Recovery With Real SLAs</div>
         <div class="tc-desc">RTO ≤6 hours, RPO ≤15 minutes. Not aspirational — documented in a full RACI matrix with step-by-step recovery procedures, parallel execution paths, and Sayaintel engineers assigned at each step. Tested before go-live. Drilled annually.</div>
       </div>
