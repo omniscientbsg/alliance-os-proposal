@@ -1102,7 +1102,7 @@ section { position: relative; }
     </div>
     <div class="band-divider"></div>
     <div class="band-item">
-      <div class="band-num">Vector</div>
+      <div class="band-num">AES-256</div>
       <div class="band-text">All PII & sensitive<br>data encrypted</div>
     </div>
   </div>
@@ -1213,10 +1213,10 @@ section { position: relative; }
         </div>
         <div class="module-card">
           <div class="mc-head">
-            <div class="mc-name">AI Services Layer</div>
+            <div class="mc-name">Native AI Copilot Layer</div>
             <span class="mc-badge ops">AI</span>
           </div>
-          <div class="mc-desc">Pluggable AI service layer pre-integrated into the platform kernel. Ready to connect 3rd party AI/Big Data services without custom integration work.</div>
+          <div class="mc-desc">Native vector-based AI layer built into the platform kernel. Drives the Cmd+K Omnibar, automated fraud scoring, and document extraction entirely on our proprietary infrastructure.</div>
         </div>
       </div>
     </div>
@@ -1410,7 +1410,7 @@ section { position: relative; }
       <div class="section-dash"></div>
     </div>
     <h2 class="section-heading reveal">Built on layers that<br>were designed to <em>never fail.</em></h2>
-    <p class="section-sub reveal">Alliance OS runs on a tiered microservices architecture deployed on AWS (or your preferred cloud). Every layer is independently scalable, fully observable, and production-hardened across multiple live insurance deployments.</p>
+    <p class="section-sub reveal">Alliance OS runs on an edge-native, serverless architecture deployed on AWS via Vercel and EKS. Every layer is independently scalable, fully observable, and production-hardened for extreme performance across distributed networks.</p>
 
     <div class="arch-diagram reveal">
       <div class="arch-layer">
@@ -1486,7 +1486,7 @@ section { position: relative; }
           <span class="al-node tier-ext">SMS / Email / Social</span>
           <span class="al-node tier-ext">Payment Gateways</span>
           <span class="al-node tier-ext">AMLO / Blacklist</span>
-          <span class="al-node tier-ext">3rd Party AI</span>
+          <span class="al-node tier-ext">Govt Databases / TIRA</span>
           <span class="al-node tier-ext">Document Management</span>
           <span class="al-node tier-ext">Data Lake / BI Tools</span>
         </div>
@@ -1530,7 +1530,7 @@ section { position: relative; }
     <div class="deploy-intro-grid">
       <div class="deploy-text reveal">
         <p class="deploy-body">
-          Alliance OS operates a one-click CI/CD deployment pipeline via GitHub Actions and GitHub Actions. Every change — Next.js frontend, Node.js services, database migrations, and UI updates — is containerized via Docker and deployed automatically to our Kubernetes (AWS EKS) clusters with all unit test cases executed. Thanks to EKS rolling deployments, our target for both hotfixes and major releases is zero downtime. Kubernetes seamlessly drains traffic from old pods and routes it to new ones.
+          Alliance OS operates a one-click CI/CD deployment pipeline via GitHub Actions. Every change — Next.js frontend, Node.js services, database migrations, and UI updates — is deployed via atomic Git-driven deployments. Heavy backend tasks run on AWS EKS with rolling zero-downtime updates, while the UI is instantly distributed to the Vercel Global Edge Network. This hybrid approach guarantees backend data integrity while delivering frontend pages in milliseconds.
         </p>
         <p class="deploy-body">
           The platform uses a structured branching model (Master → Release → Develop → Feature) that mirrors four live environments: Prod, UAT, Test, and Enhance/Local. Configuration management follows the same flow, ensuring configuration releases are always tracked alongside code.
@@ -1619,7 +1619,7 @@ section { position: relative; }
       <div class="sla-card">
         <div class="sla-top">≤10 min</div>
         <div class="sla-unit">Deployment Downtime</div>
-        <div class="sla-desc">Kubernetes rolling updates ensure no traffic is dropped. 100% of deployments run without interruption.</div>
+        <div class="sla-desc">Atomic edge deployments and Kubernetes rolling updates ensure no traffic is dropped. 100% of deployments run without interruption.</div>
       </div>
       <div class="sla-card">
         <div class="sla-top">0 min</div>
@@ -1917,7 +1917,7 @@ section { position: relative; }
           <div class="if-num">1</div>
           <div>
             <div class="if-title">Detection — Automated Alerts Fire</div>
-            <div class="if-desc">Datadog, Sentry, and Vercel Analytics continuously monitor all components. Alerts trigger automatically the moment thresholds are crossed — before users report anything.</div>
+            <div class="if-desc">Datadog, Sentry, and Google Analytics 4 continuously monitor all components. Alerts trigger automatically the moment thresholds are crossed — before users report anything.</div>
           </div>
         </div>
         <div class="if-step">
